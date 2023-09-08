@@ -4,14 +4,14 @@ import { ToastManagerOptions, Toast } from './Interfaces';
 class ToastManager {
     
     private _options: ToastManagerOptions;
-    constructor(options: ToastManagerOptions = {}) {
 
-        this._options = {
-            position: options.position || "top-right",
-            animation: options.animation || ToastAnimation.SlideRight,
-            duration: options.duration || 5000, // Default duration is 5 seconds
-        };
-        console.log(this._options)
+    private defaultOptions: ToastManagerOptions = {
+        position: "top-right",
+        animation: ToastAnimation.SlideRight,
+        duration: 5000, // Default duration is 5 seconds
+    };
+    constructor() {
+        this._options = { ...this.defaultOptions, ...this.options }
     }
 
     get options(): ToastManagerOptions {
@@ -19,11 +19,11 @@ class ToastManager {
     }
 
     set options(value: ToastManagerOptions) {
-        this._options = value;
+        this._options = { ...this.defaultOptions, ...value };
     }
 
     show({ type, title, message, icon }: Toast): void {
-        console.log(this.options)
+        
         const toastElement: HTMLDivElement = document.createElement("div");
         toastElement.classList.add("toast", type, this.options.animation!);
 
@@ -56,7 +56,6 @@ class ToastManager {
         const toastContainer: Element = this.getContainer();
         toastContainer.appendChild(toastElement);
 
-        //let computedDuration: number = this.duration
         let computedDuration: number = this.options.duration!
 
         const progressBarInterval = setInterval((): void => {
@@ -69,7 +68,7 @@ class ToastManager {
             clearInterval(progressBarInterval);
             //TODO: FadeOut the element
             toastContainer.removeChild(toastElement);
-        }, 5000); // TODO: get duration from options here
+        }, this.options.duration);
     }
 
     getContainer(): Element {

@@ -67,6 +67,9 @@
   top: 10px;
   right: 10px;
   z-index: 1000;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
 }
 
 .toast {
@@ -76,7 +79,7 @@
 }
 
 .toast .progress-bar {
-  background-color: #007bff;
+  background-color: #57d36f;
   height: 5px;
   width: 0;
   position: absolute;
