@@ -1,0 +1,139 @@
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.toast-container {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+}
+
+.toast {
+  padding: 20px;
+  border-radius: 5px;
+  animation: slideInUp 0.5s ease-in-out;
+}
+
+.toast .progress-bar {
+  background-color: #007bff;
+  height: 5px;
+  width: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 0 0 5px 5px;
+}
+
+.success {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.error {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.warning {
+  background-color: #ffc107;
+  color: #000;
+}
+
+/* Styling for the icon */
+.toast .icon {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 18px;
+  vertical-align: middle;
+}
+
+/* Styling for the content (title and message) */
+.toast .content {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Styling for the title */
+.toast .title {
+  font-weight: bold;
+}
+
+@keyframes slideInUp {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
