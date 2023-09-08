@@ -19,3 +19,4 @@ ptoast is a light weight Javascript package for toast notification using tailwin
 - ⏳should make the progress optional
 - ⏳add more options
 - ⏳Possibly add alpineJs to deal with transitions
+- ⏳Possibly make use of tailwind optional
