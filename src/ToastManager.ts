@@ -7,7 +7,7 @@ class ToastManager {
 
     private defaultOptions: ToastManagerOptions = {
         position: "top-right",
-        animation: ToastAnimation.SlideRight,
+        animation: ToastAnimation.SlideInUp,
         duration: 5000, // Default duration is 5 seconds
     };
     constructor() {
@@ -53,22 +53,22 @@ class ToastManager {
         progressBarElement.classList.add("progress-bar");
         toastElement.appendChild(progressBarElement);
 
+        
+
         const toastContainer: Element = this.getContainer();
         toastContainer.appendChild(toastElement);
 
+        // Manage the progressBar
         let computedDuration: number = this.options.duration!
 
-        const progressBarInterval = setInterval((): void => {
+        const progressBarInterval: NodeJS.Timeout = setInterval((): void => {
             computedDuration = computedDuration - 100
             const progressBarWidth = (100 * computedDuration) / this.options.duration!
             progressBarElement.style.width = progressBarWidth + "%";
         }, 100);
 
-        setTimeout((): void => {
-            clearInterval(progressBarInterval);
-            //TODO: FadeOut the element
-            toastContainer.removeChild(toastElement);
-        }, this.options.duration);
+        // Close the toast after this.options.duration
+        setTimeout(() => this.closeToast(toastElement, progressBarInterval), this.options.duration);
     }
 
     getContainer(): Element {
@@ -80,6 +80,23 @@ class ToastManager {
         }
         return toastContainer;
     }
+    
+    
+    closeToast(toastElement: HTMLDivElement, progressBarInterval: NodeJS.Timeout | null): void {
+        
+        if (progressBarInterval) {
+            clearInterval(progressBarInterval);
+        }
+        
+        toastElement.classList.remove(this.options.animation!);
+        toastElement.classList.add('fadeOut');
+
+        // Use setTimeout with a named function for clarity
+        setTimeout(() =>  {
+            this.getContainer().removeChild(toastElement);
+        }, 500);
+    }
+
 
     success(title: string, message: string, icon: string): void {
         this.show({
