@@ -6,7 +6,9 @@ document.addEventListener("DOMContentLoaded", function () {
       duration: 7000,
     });*/
     
-    toastManager.options = {}
+    toastManager.options = {
+        duration: 10000
+    }
   
     const showToastButton = document.getElementById("show-toast");
   
