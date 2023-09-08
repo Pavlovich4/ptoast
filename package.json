@@ -1,15 +1,15 @@
 {
-  "name": "ptoast",
+  "name": "toast-me",
   "version": "1.0.0",
-  "description": "",
+  "description": "A light weight Javascript package for toast notification using tailwindcss",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "start": "webpack-dev-server --open",
     "build": "webpack"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["toast", "tailwindcss", "toast notification"],
+  "author": "Pavlove BIOKOU",
   "license": "ISC",
   "devDependencies": {
     "ts-loader": "^9.4.4",
