@@ -11,7 +11,7 @@ ptoast is a light weight Javascript package for toast notification using tailwin
 
 ## TODO
 
-- ⏳Resolve issue with options
+- ✅Resolve issue with options
 - ⏳Review how icons works
 - ⏳Review the design by using tailwindcss
 - ⏳Close button
