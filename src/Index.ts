@@ -1,4 +1,5 @@
 import toastManager from './ToastManager'
+import {ToastAnimation} from "./Enums";
 
 document.addEventListener("DOMContentLoaded", function () {
     /*const toastManager = toastManager({
@@ -7,13 +8,16 @@ document.addEventListener("DOMContentLoaded", function () {
     });*/
     
     toastManager.options = {
-        duration: 10000
+        animation: ToastAnimation.FadeIn,
     }
   
     const showToastButton = document.getElementById("show-toast");
   
     showToastButton?.addEventListener("click", function () {
       console.log('here');
+      toastManager.info("Here is the title", "This is a success toast message.", "fas fa-check-circle");
       toastManager.error("Here is the title", "This is a success toast message.", "fas fa-check-circle");
+      toastManager.warning("Here is the title", "This is a success toast message.", "fas fa-check-circle");
+      toastManager.success("Here is the title", "This is a success toast message.", "fas fa-check-circle");
     });
   });

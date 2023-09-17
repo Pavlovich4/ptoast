@@ -7,7 +7,8 @@ export enum ToastType {
   }
   
   export enum ToastAnimation {
-    SlideRight = "slideRight",
+      SlideInUp = "slideInUp",
+      FadeIn = "fadeIn"
     // Add more animation types as needed
   }
   
