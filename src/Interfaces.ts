@@ -1,17 +1,18 @@
 // Interface for options passed to ToastManager constructor
-import {ToastAnimation, ToastType} from "./Enums";
+import {ToastAnimation, ToastPosition, ToastType} from "./Enums";
 
 export interface ToastManagerOptions {
-    position?: string;
+    position?: ToastPosition;
     animation?: ToastAnimation;
     duration?: number;
+    close?: boolean,
+    progress?: boolean
   }
   
   // Interface for individual toast properties
   export interface Toast {
-    type: ToastType;
+    type?: ToastType;
     title?: string;
     message?: string;
-    icon?: string;
   }
   
