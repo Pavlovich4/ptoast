@@ -1,4 +1,4 @@
-ptoast is a light weight Javascript package for toast notification using tailwindcss
+toastme is a light weight Javascript package for toast notification using tailwindcss
 
 ## Requirements
 - Node 16.x+
