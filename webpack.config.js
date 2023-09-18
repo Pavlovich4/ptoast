@@ -7,8 +7,8 @@ const __dirname = path.dirname(__filename);
 
 export default {
     entry: './src/Index.ts',
-    mode: 'development',
-    devtool: 'inline-source-map',
+    mode: 'production',
+    devtool: 'source-map',
     devServer: {
         static: './',
     },
@@ -25,7 +25,8 @@ export default {
         ],
     },
     output: {
-        filename: 'index.js',
-        path: path.resolve(__dirname, '.'),
+        filename: 'ptoast.js',
+        path: path.resolve(__dirname, 'dist'), // Output directory
+        libraryTarget: 'umd', // Export as UMD module
     },
 };

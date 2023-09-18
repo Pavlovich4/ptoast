@@ -1,1 +1,1 @@
-export { default as toastme } from "./ToastManager";
+export { default as PToast } from './ToastManager';
