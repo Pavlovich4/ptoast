@@ -25,7 +25,7 @@ export default {
         ],
     },
     output: {
-        filename: 'ptoast.js',
+        filename: 'index.js',
         path: path.resolve(__dirname, '.'),
     },
 };
