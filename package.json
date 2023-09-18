@@ -1,5 +1,5 @@
 {
-  "name": "ptoast",
+  "name": "p-toast",
   "version": "1.0.0",
   "description": "A light weight Javascript package for toast notification using tailwindcss",
   "main": "dist/ptoast.js",
