@@ -1,6 +1,6 @@
 {
   "name": "p-toast",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A light weight Javascript package for toast notification using tailwindcss",
   "main": "dist/ptoast.js",
   "type": "module",
@@ -9,7 +9,11 @@
     "start": "webpack-dev-server --open",
     "build": "webpack --config webpack.config.js"
   },
-  "keywords": ["toast", "tailwindcss", "toast notification"],
+  "keywords": [
+    "toast",
+    "tailwindcss",
+    "toast notification"
+  ],
   "author": "Pavlove BIOKOU",
   "license": "MIT",
   "devDependencies": {
