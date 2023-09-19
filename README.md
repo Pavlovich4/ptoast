@@ -1,7 +1,7 @@
-ptoast is a light weight Javascript package for toast notification using tailwindcss
+ptoast is a lightweight Javascript package for toast notification using tailwindcss
 
 ## How to use
-This package require tailwindcss so don't forget to install tailwindcss and configure it
+This package requires tailwindcss so don't forget to install tailwindcss and configure it
 ##### install package from npm
 ```bash
 npm install p-toast 
@@ -12,17 +12,9 @@ yarn install p-toast
 ```javascript
 import {toast} from 'p-toast';
 ```
-##### Add to `tailwind.config.js` file
-```diff
-export default {
-  content: [
-    +"./node_modules/p-toast/src/*.ts"
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-}
+##### Add this to `tailwind.config.js` file in the content array. Because of the JIT we need this to make classes available
+```javascript
+  "./node_modules/p-toast/src/*.ts"
 ```
 
 ##### Use
@@ -70,7 +62,7 @@ By default, each toast has a close button. To disable it do this :
 - `error`to fire error toast
 - `withOptions` to define toast options
     - `duration` in ms: define the number of seconds the toast should be shown (default to 5000ms)
-    - `position`: the `position` of the toast (available : `top-right`, `top-left`, `bottom-right`, `bottom-left`)
+    - `position`: the `position` of the toast (available: `top-right`, `top-left`, `bottom-right`, `bottom-left`)
 
 ## TODO
 
