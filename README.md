@@ -13,13 +13,13 @@ yarn install p-toast
 import {toast} from 'p-toast';
 ```
 ##### Add to `tailwind.config.js` file
-```javascript
+```diff
 export default {
   content: [
     "./resources/**/*.blade.php",
     "./resources/**/*.js",
     "./resources/**/*.vue",
-    "./node_modules/p-toast/src/*.ts" // [tl! ++]
+    +"./node_modules/p-toast/src/*.ts"
   ],
   theme: {
     extend: {},
