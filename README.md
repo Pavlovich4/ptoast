@@ -16,9 +16,6 @@ import {toast} from 'p-toast';
 ```diff
 export default {
   content: [
-    "./resources/**/*.blade.php",
-    "./resources/**/*.js",
-    "./resources/**/*.vue",
     +"./node_modules/p-toast/src/*.ts"
   ],
   theme: {
