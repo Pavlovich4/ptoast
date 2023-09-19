@@ -19,7 +19,7 @@ export default {
     "./resources/**/*.blade.php",
     "./resources/**/*.js",
     "./resources/**/*.vue",
-    "./node_modules/p-toast/src/*.ts" [tl! ++]
+    "./node_modules/p-toast/src/*.ts" // [tl! ++]
   ],
   theme: {
     extend: {},
