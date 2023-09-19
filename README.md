@@ -35,7 +35,7 @@ toast.options = {
 ### Animation
 By default, the toast won't be animated. If you want to add some animation to the toast you need to add this to you js :
 
-```
+```javascript
 import 'p-toast/ptoast.css'
 ```
 
