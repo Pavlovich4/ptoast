@@ -1,6 +1,7 @@
 ptoast is a light weight Javascript package for toast notification using tailwindcss
 
 ## How to use
+This package require tailwindcss so don't forget to install tailwindcss and configure it
 ##### install package from npm
 ```bash
 npm install p-toast 
@@ -10,6 +11,21 @@ yarn install p-toast
 ##### Import module to your script
 ```javascript
 import {toast} from 'p-toast';
+```
+##### Add to `tailwind.config.js` file
+```javascript
+export default {
+  content: [
+    "./resources/**/*.blade.php",
+    "./resources/**/*.js",
+    "./resources/**/*.vue",
+    "./node_modules/p-toast/src/*.ts" [tl! ++]
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
 ```
 
 ##### Use
