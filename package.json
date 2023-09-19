@@ -9,10 +9,17 @@
     "start": "webpack-dev-server --open",
     "build": "webpack --config webpack.config.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Pavlovich4/ptoast.git"
+  },
   "keywords": [
     "toast",
     "tailwindcss",
-    "toast notification"
+    "toast notification",
+    "js",
+    "javascript",
+    "css"
   ],
   "author": "Pavlove BIOKOU",
   "license": "MIT",
@@ -22,5 +29,9 @@
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/Pavlovich4/ptoast/issues"
+  },
+  "homepage": "https://github.com/Pavlovich4/ptoast#readme"
 }
