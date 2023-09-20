@@ -6,12 +6,12 @@ export declare enum ToastType {
     Default = "default"
 }
 export declare enum ToastAnimation {
-    SlideInUp = "slideInUp",
     SlideUp = "slideUp",
     SlideDown = "slideDown",
     SlideRight = "slideRight",
     SlideLeft = "slideLeft",
-    FadeIn = "fadeIn"
+    FadeIn = "fadeIn",
+    ZoomIn = "zoomIn"
 }
 export declare enum ToastPosition {
     TopRight = "top-right",
