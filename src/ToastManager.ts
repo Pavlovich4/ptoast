@@ -7,7 +7,7 @@ class ToastManager {
 
     private defaultOptions: ToastManagerOptions = {
         position: ToastPosition.TopRight,
-        animation: ToastAnimation.SlideInUp,
+        animation: ToastAnimation.SlideUp,
         duration: 5000,
         close: true,
         progress: true
@@ -65,7 +65,7 @@ class ToastManager {
         if (this.options.progress) {
 
             const progressBarElement: HTMLDivElement = document.createElement("div");
-            progressBarElement.classList.add(..."absolute bottom-0 left-0 h-1 w-full bg-gray-400".split(' '), progressBarClasses);
+            progressBarElement.classList.add(..."absolute bottom-0 left-0 h-1 w-full bg-gray-400 rounded-r-md transition-[width]".split(' '), progressBarClasses);
             toastElement.appendChild(progressBarElement);
 
 
@@ -145,7 +145,7 @@ class ToastManager {
         // Use setTimeout with a named function for clarity
         setTimeout(() => {
             toastElement.remove()
-        }, 500);
+        }, 100);
     }
 
 
@@ -191,7 +191,7 @@ class ToastManager {
         const toastElement: HTMLDivElement = document.createElement("div");
 
         toastElement.classList.add(
-            ..."relative flex translate-x-0 items-center rounded-r-md border-l-4 py-4 pl-3 pr-10 shadow-lg toast".split(' '),
+            ..."relative flex translate-x-0 items-center rounded-r-md border-l-4 py-2 pl-2 pr-5 shadow-lg transition-all toast".split(' '),
             type,
             this.options.animation!,
             ...toastClasses.split(' ')
@@ -208,19 +208,19 @@ class ToastManager {
         switch (type) {
             case 'success':
                 toastClasses = "border-green-600 bg-green-500 text-white"
-                progressBarClasses = "bg-green-600"
+                progressBarClasses = "!bg-green-600"
                 break;
             case 'error':
                 toastClasses = "border-red-700 bg-red-500 text-white"
-                progressBarClasses = "bg-red-700"
+                progressBarClasses = "!bg-red-700"
                 break;
             case 'info':
                 toastClasses = "border-blue-600 bg-blue-500 text-white"
-                progressBarClasses = "bg-blue-600"
+                progressBarClasses = "!bg-blue-600"
                 break;
             case 'warning':
                 toastClasses = "border-yellow-600 bg-yellow-500 text-white"
-                progressBarClasses = "bg-yellow-600"
+                progressBarClasses = "!bg-yellow-600"
                 break;
         }
         
